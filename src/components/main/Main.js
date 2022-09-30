@@ -1,11 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, Stars } from "@react-three/drei";
-
 import styled from "styled-components";
-
-import Desktop from "./Desktop.js";
-import Mobile from "./Mobile.js";
 import EarthSistem from "./EarthSistem.js";
 
 let vh = window.innerHeight;
@@ -22,15 +18,17 @@ const Main = () => {
 
   return (
     <MainAnimation>
-      <Canvas
-        style={{ position: "fixed", zIndex: 0 }}
-        className="webgl"
-        dpr={[1, 2]}
-        camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
-      >
-        <DeviceOrientationControls />
-        <Stars />
-      </Canvas>
+      {isMobile && (
+        <Canvas
+          style={{ position: "fixed", zIndex: 0 }}
+          className="webgl"
+          dpr={[1, 2]}
+          camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
+        >
+          <DeviceOrientationControls />
+          <Stars />
+        </Canvas>
+      )}
       <Canvas
         style={{ position: "relative", zIndex: 1 }}
         className="webgl"
@@ -38,7 +36,9 @@ const Main = () => {
         camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
       >
         <ambientLight intensity={5} />
-        <EarthSistem />
+        <Suspense>
+          <EarthSistem isMobile={isMobile} />
+        </Suspense>
       </Canvas>
     </MainAnimation>
   );
