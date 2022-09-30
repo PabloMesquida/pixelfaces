@@ -63,8 +63,10 @@ const Main = () => {
             <Moon scale={[0.25, 0.25, 0.25]} />
           </group>
         </Suspense>
-        {isMobile ? <DeviceOrientationControls /> : <Update />}
-        <Stars />
+
+        <DeviceOrientationControls>
+          <Stars />
+        </DeviceOrientationControls>
       </Canvas>
     </MainAnimation>
   );
