@@ -70,8 +70,7 @@ const Mobile = () => {
 
     return (
       <>
-        <PerspectiveCamera ref={cam} />
-
+        <DeviceOrientationControls />
         {createPortal(<PortalView />, scene)}
         <Plane ref={planeRef}>
           <meshStandardMaterial attach="material" map={target.texture} />
