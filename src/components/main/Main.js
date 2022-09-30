@@ -1,6 +1,6 @@
 import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { DeviceOrientationControls } from "@react-three/drei";
+import { DeviceOrientationControls, Stars } from "@react-three/drei";
 
 import styled from "styled-components";
 
@@ -65,6 +65,7 @@ const Main = () => {
           <Update />
         </Suspense>
         {isMobile && <DeviceOrientationControls />}
+        <Stars />
       </Canvas>
     </MainAnimation>
   );
