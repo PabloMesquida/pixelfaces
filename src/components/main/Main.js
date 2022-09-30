@@ -62,6 +62,7 @@ const Main = () => {
           <group ref={refMoon}>
             <Moon scale={[0.25, 0.25, 0.25]} />
           </group>
+          <Update />
         </Suspense>
         {isMobile && <DeviceOrientationControls />}
       </Canvas>
