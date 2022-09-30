@@ -72,7 +72,7 @@ const Mobile = () => {
       <>
         <PerspectiveCamera ref={cam} />
 
-        {createPortal(<PortalView />, scene)}
+        {createPortal(<Desktop />, scene)}
         <Plane ref={planeRef}>
           <meshStandardMaterial attach="material" map={target.texture} />
         </Plane>
