@@ -25,7 +25,7 @@ const Main = () => {
         dpr={[1, 2]}
         camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 3000 }}
       >
-        {isMobile ? <PortalView /> : <Desktop />}
+        {isMobile ? <Mobile /> : <Desktop />}
       </Canvas>
     </MainAnimation>
   );
