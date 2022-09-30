@@ -64,7 +64,7 @@ const Main = () => {
           </group>
           <Update />
         </Suspense>
-        {isMobile && <DeviceOrientationControls />}
+        <DeviceOrientationControls />
         <Stars />
       </Canvas>
     </MainAnimation>
