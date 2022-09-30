@@ -52,7 +52,7 @@ const Main = () => {
       <Canvas
         className="webgl"
         dpr={[1, 2]}
-        camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 3000 }}
+        camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
       >
         <ambientLight intensity={5} />
         <Suspense>
@@ -62,9 +62,8 @@ const Main = () => {
           <group ref={refMoon}>
             <Moon scale={[0.25, 0.25, 0.25]} />
           </group>
-          <Update />
         </Suspense>
-        <DeviceOrientationControls />
+        {isMobile ? <DeviceOrientationControls /> : <Update />}
         <Stars />
       </Canvas>
     </MainAnimation>
