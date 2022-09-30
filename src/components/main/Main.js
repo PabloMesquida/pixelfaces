@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Desktop from "./Desktop.js";
 import Mobile from "./Mobile.js";
+import PortalView from "./PortalView.js";
 
 let vh = window.innerHeight;
 
@@ -24,7 +25,7 @@ const Main = () => {
         dpr={[1, 2]}
         camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 3000 }}
       >
-        {isMobile ? <Mobile /> : <Desktop />}
+        {isMobile ? <PortalView /> : <Desktop />}
       </Canvas>
     </MainAnimation>
   );
