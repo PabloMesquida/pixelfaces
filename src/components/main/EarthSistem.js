@@ -42,11 +42,11 @@ const Sistem = ({ isMobile }) => {
       {!isMobile && (
         <Stars
           speed={0}
-          depth={2}
-          count={1000}
-          saturation={100}
-          radius={25}
-          factor={4}
+          depth={0}
+          count={1800}
+          saturation={50}
+          radius={50}
+          factor={5}
         />
       )}
     </>
