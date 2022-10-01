@@ -20,9 +20,6 @@ const Main = () => {
         >
           <DeviceOrientationControls />
           <Stars speed={0} depth={0} count={2000} saturation={100} />
-          <EffectComposer>
-            <Pixelation granularity={8} />
-          </EffectComposer>
         </Canvas>
       )}
       <Canvas
@@ -34,9 +31,6 @@ const Main = () => {
         <Lights />
         <Suspense>
           <EarthSistem isMobile={isMobile} />
-          <EffectComposer>
-            <Pixelation granularity={8} />
-          </EffectComposer>
         </Suspense>
       </Canvas>
       <MainConteiner>
