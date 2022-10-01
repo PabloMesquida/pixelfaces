@@ -16,7 +16,7 @@ const Sistem = ({ isMobile }) => {
       let elapsed = clock.getElapsedTime();
 
       refMoon.current.position.x = Math.sin(elapsed * 0.1) * 2.5;
-      refMoon.current.position.y = Math.abs(Math.cos(elapsed * 0.01));
+      refMoon.current.position.y = Math.abs(Math.cos(elapsed * 0.1));
       refMoon.current.position.z = Math.cos(elapsed * 0.1) * 2.5;
       refMoon.current.lookAt(refEarth.current.position);
 
