@@ -40,7 +40,7 @@ const Sistem = ({ isMobile }) => {
         <Moon scale={[0.25, 0.25, 0.25]} />
       </group>
       <Update />
-      {!isMobile && <Stars />}
+      {!isMobile && <Stars speed={0} depth={0} count={2000} saturation={100} />}
     </>
   );
 };

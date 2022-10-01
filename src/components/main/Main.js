@@ -1,6 +1,12 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, Stars } from "@react-three/drei";
+
+import {
+  EffectComposer,
+  Pixelation,
+  HueSaturation,
+} from "@react-three/postprocessing";
 import styled from "styled-components";
 import EarthSistem from "./EarthSistem.js";
 
@@ -35,9 +41,14 @@ const Main = () => {
         dpr={[1, 2]}
         camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
       >
-        <ambientLight intensity={5} />
+        <ambientLight intensity={0.5} color={"#ff9600"} />
+        <directionalLight position={[-5, 0, 2]} color={"#ff9600"} />
         <Suspense>
           <EarthSistem isMobile={isMobile} />
+          <EffectComposer>
+            <HueSaturation saturation={0.1} />
+            <Pixelation granularity={8} />
+          </EffectComposer>
         </Suspense>
       </Canvas>
     </MainAnimation>

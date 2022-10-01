@@ -1,0 +1,21 @@
+diff --git a/node_modules/@react-three/drei/core/Stars.js b/node_modules/@react-three/drei/core/Stars.js
+index e6b1682..799a12e 100644
+--- a/node_modules/@react-three/drei/core/Stars.js
++++ b/node_modules/@react-three/drei/core/Stars.js
+@@ -27,6 +27,7 @@ class StarfieldMaterial extends ShaderMaterial {
+       }`,
+       fragmentShader:
+       /* glsl */
++      /* gl_FragColor = vec4(vColor, opacity); */
+       `
+       uniform sampler2D pointTexture;
+       uniform float fade;
+@@ -37,7 +38,7 @@ class StarfieldMaterial extends ShaderMaterial {
+           float d = distance(gl_PointCoord, vec2(0.5, 0.5));
+           opacity = 1.0 / (1.0 + exp(16.0 * (d - 0.25)));
+         }
+-        gl_FragColor = vec4(vColor, opacity);
++       gl_FragColor = vec4(0.75, 0.44, 0, opacity); 
+ 
+         #include <tonemapping_fragment>
+ 	      #include <encodings_fragment>
