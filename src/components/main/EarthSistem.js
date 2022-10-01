@@ -10,7 +10,7 @@ const Sistem = ({ isMobile }) => {
 
   function Update() {
     useFrame(({ clock, pointer, camera }) => {
-      refEarth.current.rotation.y += -0.0015;
+      refEarth.current.rotation.y -= -0.003;
       refEarth.current.rotation.z += -0.0001;
 
       let elapsed = clock.getElapsedTime();
