@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, Stars } from "@react-three/drei";
 import { EffectComposer, Pixelation } from "@react-three/postprocessing";
 import EarthSistem from "./EarthSistem.js";
@@ -33,7 +33,7 @@ const Main = () => {
           <EarthSistem isMobile={isMobile} />
         </Suspense>
         <EffectComposer>
-          <Pixelation granularity={6} />
+          <Pixelation granularity={8} />
         </EffectComposer>
       </Canvas>
       <MainConteiner>
