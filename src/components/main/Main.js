@@ -19,7 +19,13 @@ const Main = () => {
           camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
         >
           <DeviceOrientationControls />
-          <Stars speed={0} depth={0} count={1000} saturation={100} factor={6} />
+          <Stars
+            speed={0}
+            depth={0}
+            count={1000}
+            saturation={100}
+            factor={10}
+          />
         </Canvas>
       )}
       <Canvas
