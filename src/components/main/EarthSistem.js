@@ -26,9 +26,8 @@ const Sistem = ({ isMobile }) => {
 
         camera.position.x += (parallaxX - camera.position.x) * 0.2;
         camera.position.y += (parallaxY - camera.position.y) * 0.2;
-
-        camera.lookAt(0, 0, 0);
       }
+      camera.lookAt(0, -1.8, 0);
     });
   }
   return (
