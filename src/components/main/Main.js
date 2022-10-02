@@ -58,6 +58,9 @@ const Main = () => {
         >
           <DeviceOrientationControls />
           <Stars speed={0} depth={0} count={1000} saturation={50} factor={7} />
+          <EffectComposer>
+            <Vignette darkness={0.8} />
+          </EffectComposer>
         </Canvas>
       )}
       <Canvas
