@@ -3,7 +3,7 @@ import styled from "styled-components";
 let vh = window.innerHeight;
 
 export const MainAnimation = styled.main`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   height: ${vh}px;
   display: flex;

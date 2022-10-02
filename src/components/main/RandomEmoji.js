@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { EmojiContainer } from "./RandomEmoji.styles.js";
 
 export default function RandomEmoji({ arrayE }) {
   const [indexEmoji, setIndexEmoji] = useState(0);
@@ -17,5 +18,5 @@ export default function RandomEmoji({ arrayE }) {
     }
   }, [indexEmoji]);
 
-  return <div>{arrayE[indexEmoji]}</div>;
+  return <EmojiContainer>{arrayE[indexEmoji]}</EmojiContainer>;
 }
