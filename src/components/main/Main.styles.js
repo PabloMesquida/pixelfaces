@@ -9,6 +9,12 @@ export const MainAnimation = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(38, 26, 12);
+  background: radial-gradient(
+    circle,
+    rgba(38, 26, 12, 1) 0%,
+    rgba(18, 11, 5, 1) 100%
+  );
 `;
 
 export const MainConteiner = styled.div`
@@ -18,13 +24,12 @@ export const MainConteiner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 12rem;
 `;
 
 export const H1 = styled.h1`
   line-height: 4rem;
   letter-spacing: 0.1rem;
-  padding-top: 30vh;
-  background-color: transparent;
   text-shadow: 1px 1px 0px rgba(180, 80, 0, 0.8);
   text-align: center;
 `;

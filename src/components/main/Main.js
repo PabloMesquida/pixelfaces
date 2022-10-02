@@ -1,7 +1,11 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, Stars } from "@react-three/drei";
-import { EffectComposer, Pixelation } from "@react-three/postprocessing";
+import {
+  EffectComposer,
+  Pixelation,
+  Vignette,
+} from "@react-three/postprocessing";
 import EarthSistem from "./EarthSistem.js";
 import Lights from "./Lights.js";
 import { MainAnimation, MainConteiner, H1, Txt } from "./Main.styles.js";
@@ -68,11 +72,14 @@ const Main = () => {
         </Suspense>
         <EffectComposer>
           <Pixelation granularity={8} />
+          <Vignette darkness={0.8} />
         </EffectComposer>
       </Canvas>
       <MainConteiner>
         <H1>Pixel Faces</H1>
-        <Txt>Hi, Welcome!</Txt>
+        <Txt>
+          <b>Hi, Welcome!</b>
+        </Txt>
         <RandomEmoji arrayE={shuffleArray(arrayEmojis)} />
       </MainConteiner>
     </MainAnimation>
