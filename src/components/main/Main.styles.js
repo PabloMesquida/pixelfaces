@@ -30,7 +30,7 @@ export const MainConteiner = styled.div`
 export const H1 = styled.h1`
   line-height: 4rem;
   letter-spacing: 0.1rem;
-  text-shadow: 1px 1px 0px rgba(180, 80, 0, 0.8);
+  text-shadow: 0px 0px 8px rgba(255, 162, 0, 0.6);g
   text-align: center;
 `;
 
