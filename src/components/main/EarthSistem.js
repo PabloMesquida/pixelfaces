@@ -44,9 +44,9 @@ const Sistem = ({ isMobile }) => {
           speed={0}
           depth={0}
           count={1800}
-          saturation={100}
+          saturation={50}
           radius={50}
-          factor={4}
+          factor={3}
         />
       )}
     </>
