@@ -5,14 +5,13 @@ export const GlobalStyle = createGlobalStyle`
 *::after,
 *::before {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #120b05;
-
+  font-size: 16px;
 }
 
 h1{

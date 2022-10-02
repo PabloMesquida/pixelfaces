@@ -39,6 +39,6 @@ export const Txt = styled.span`
   line-height: 2rem;
   background-color: transparent;
   font-family: "Roboto Mono", monospace;
-  font-size: clam(1.5rem, 8vw - 2rem, 3rem);
+  font-size: 1rem;
   color: ${({ theme }) => theme.txtColor};
 `;

@@ -6,8 +6,8 @@ const Lights = () => {
       <ambientLight intensity={0.3} color={"#ff9600"} />
       <directionalLight
         position={[-5, 1, 2]}
-        color={"#ff9600"}
-        intensity={0.9}
+        color={"#ffcc00"}
+        intensity={1.5}
       />
     </>
   );
