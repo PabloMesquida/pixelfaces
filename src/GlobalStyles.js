@@ -38,7 +38,7 @@ h2{
   font-family: "Roboto Mono", monospace;
   font-size: 1.2rem;
   padding:0.8rem;
-  padding-left: 8%;
+  padding-left: 6%;
   margin-bottom: 0;
   color: ${({ theme }) => theme.secondaryColor};
   background-color:  ${({ theme }) => theme.primaryColor};
@@ -64,11 +64,13 @@ h2{
 }
 
 article{
-   height: auto;
-    padding:3rem 8% 3rem 8%;
-    display: flex;
-    flex-direction: row;
-    vertical-align: text-top;
-    background-color: ${({ theme }) => theme.secondaryColor};
+  height: auto;
+  padding:1rem 6% 1rem 6%;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+  background-color: ${({ theme }) => theme.secondaryColor};
 }
+
 `;

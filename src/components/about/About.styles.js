@@ -17,7 +17,12 @@ export const ImgAbout = styled.img`
 `;
 
 export const TxtAbout = styled.p`
-  padding: 0 5% 0 10%;
+  padding: 0 0% 0 6%;
   margin: 0;
-  vertical-align: top;
+`;
+
+export const LogosContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
