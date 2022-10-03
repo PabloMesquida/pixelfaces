@@ -34,6 +34,26 @@ export const H1 = styled.h1`
   text-align: center;
 `;
 
+export const AH1 = styled.a`
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 0px 0px 8px rgba(255, 162, 0, 0.6);
+  text-align: center;
+  text-decoration: none;
+  &:link,
+  &:visited,
+  &:focus,
+  &:hover,
+  &:active {
+    line-height: 4rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 0px 0px 8px rgba(255, 162, 0, 0.6);
+    text-align: center;
+    text-decoration: none;
+    color: ${({ theme }) => theme.primaryColor};
+  }
+`;
+
 export const Txt = styled.span`
   font-size: 1rem;
   text-align: center;

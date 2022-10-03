@@ -10,7 +10,7 @@ import EarthSistem from "./EarthSistem.js";
 import Lights from "./Lights.js";
 import RandomEmoji from "./RandomEmoji.js";
 import Loader from "../Loader.js";
-import { MainAnimation, MainConteiner, H1, Txt } from "./Main.styles.js";
+import { MainAnimation, MainConteiner, H1, AH1, Txt } from "./Main.styles.js";
 
 const Main = () => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -37,7 +37,7 @@ const Main = () => {
     "​🌈",
     "​⚡",
     "​💡",
-    "🕹",
+    "🕹️",
     "🛸",
     "🚀",
   ];
@@ -89,7 +89,9 @@ const Main = () => {
           </EffectComposer>
         </Canvas>
         <MainConteiner>
-          <H1>Pixel Faces</H1>
+          <H1>
+            <AH1 href="#About">Pixel Faces</AH1>
+          </H1>
           <Txt>
             <b>Hi, Welcome!</b>
           </Txt>

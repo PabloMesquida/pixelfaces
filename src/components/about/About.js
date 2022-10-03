@@ -5,7 +5,7 @@ import pabloImg from "../../static/img/pabloAlpha_small.png";
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="About">
       <h2>About.</h2>
       <article>
         <picture>

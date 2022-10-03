@@ -24,7 +24,7 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
   color: ${({ theme }) => theme.txtColor};
-
+  scroll-behavior: smooth;
 }
 
 h1{
