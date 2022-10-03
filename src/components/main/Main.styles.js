@@ -35,10 +35,8 @@ export const H1 = styled.h1`
 `;
 
 export const Txt = styled.span`
+  font-size: 1rem;
   text-align: center;
   line-height: 2rem;
   background-color: transparent;
-  font-family: "Roboto Mono", monospace;
-  font-size: 1rem;
-  color: ${({ theme }) => theme.txtColor};
 `;
