@@ -54,7 +54,7 @@ const Main = () => {
       <Suspense fallback={<Loader />}>
         {isMobile && (
           <Canvas
-            style={{ position: "fixed", zIndex: 0, top: 0 }}
+            style={{ position: "relative", zIndex: 0, top: 0 }}
             className="webgl"
             dpr={[1, 2]}
             camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
