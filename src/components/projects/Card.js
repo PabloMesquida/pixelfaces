@@ -11,7 +11,7 @@ import {
   CardLinkContainer,
   CardInfo,
   CardHeader,
-} from "./Card.styles";
+} from "./Card.styles.js";
 
 const Card = ({ data }) => {
   const imgURL = `assets/img/${data.img}`;

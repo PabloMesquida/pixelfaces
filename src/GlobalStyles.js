@@ -25,13 +25,15 @@ body {
   font-size: 0.8rem;
   color: ${({ theme }) => theme.txtColor};
   scroll-behavior: smooth;
+    @media (min-width: 640px) {
+     font-size: 0.9rem;
+  }
 }
 
 h1{
   font-family: 'Press Start 2P', sans-serif;
   font-size: 3rem;
-  color: ${({ theme }) => theme.primaryColor};
-  
+  color: ${({ theme }) => theme.primaryColor};  
 }
 
 h2{
@@ -61,6 +63,10 @@ h2{
       visibility: hidden;
     }
   }
+
+  @media (min-width: 640px) {
+     font-size: 1.2rem;
+  }
 }
 
 h3{
@@ -70,6 +76,9 @@ h3{
   margin: 0;
   margin-bottom:0.5rem;
   color: ${({ theme }) => theme.txtColor};
+    @media (min-width: 640px) {
+     font-size: 1.1rem;
+  }
  
 }
 
@@ -79,7 +88,7 @@ p{
 
 article{
   height: auto;
-  padding:1rem 6% 1rem 6%;
+  padding:2rem 6% 2rem 6%;
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -89,6 +98,7 @@ article{
 }
 
 section{
+  padding-top:1rem;
   width: 96vw;
   max-width: 880px;
   min-width: 280px;
