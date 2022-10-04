@@ -36,8 +36,8 @@ h1{
 
 h2{
   font-family: "Roboto Mono", monospace;
-  font-size: 1.2rem;
-  padding:0.8rem;
+  font-size: 1.1rem;
+  padding:0.5rem;
   padding-left: 6%;
   margin-bottom: 0;
   color: ${({ theme }) => theme.secondaryColor};
@@ -63,14 +63,43 @@ h2{
   }
 }
 
+h3{
+  font-family: "Roboto Mono", monospace;
+  font-size: 1rem;
+  padding:0;
+  margin: 0;
+  margin-bottom:0.5rem;
+  color: ${({ theme }) => theme.txtColor};
+ 
+}
+
+p{
+  margin-top:0.5rem;
+}
+
 article{
   height: auto;
   padding:1rem 6% 1rem 6%;
   display: flex;
   flex-direction: row;
   align-content: flex-start;
+  justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.secondaryColor};
+}
+
+section{
+  width: 96vw;
+  max-width: 880px;
+  min-width: 280px;
+  height: auto;
+  display: block;
+}
+
+img{
+  &:hover{
+    filter: drop-shadow(0px 4px 0px #00000050);
+  }
 }
 
 `;

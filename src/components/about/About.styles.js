@@ -1,11 +1,6 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.section`
-  width: 96vw;
-  max-width: 960px;
-  min-width: 280px;
-  height: auto;
-  display: block;
   border-top: thin solid ${({ theme }) => theme.primaryColor};
 `;
 
@@ -16,7 +11,7 @@ export const ImgAbout = styled.img`
   height: auto;
 `;
 
-export const TxtAbout = styled.p`
+export const TxtAbout = styled.div`
   padding: 0 0% 0 6%;
   margin: 0;
 `;

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Beatpoints",
+    "description": "Spotify API where a group of points react to the beat of the songs in a 3d environment.",
+    "img": "beatpoints.png",
+    "role": "Design & development",
+    "tags": ["React.js", "Three.js"],
+    "link": "http://beatpoints.herokuapp.com/"
+  }
+]
