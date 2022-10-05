@@ -4,7 +4,6 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* border: thin solid ${({ theme }) => theme.primaryColor};*/
   background-color: ${({ theme }) => theme.secondaryColorLighter};
   box-shadow: 0 4px 0px -1px #00000060;
   cursor: move;

@@ -20,7 +20,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #120b05;
+  background-color: ${({ theme }) => theme.backColor};
   font-family: "Roboto Mono", monospace;
   font-size: 0.8rem;
   color: ${({ theme }) => theme.txtColor};

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { useDrag } from "@use-gesture/react";
-import { Slider } from "./Cards.styles.js";
+import { Slider, NumbersContainer } from "./Cards.styles.js";
 import Card from "./Card.js";
+import Numbers from "./Numbers.js";
 import data from "../../data/data.json";
 import "./cardStyles.css";
 
@@ -40,8 +41,6 @@ function Cards() {
 
     cardWidth = document.getElementById("1");
 
-    console.log(moveX);
-
     if (moveX < -THRESHOLD) {
       moveX = -cardWidth.offsetWidth * 1;
       scale = 1;
@@ -58,23 +57,28 @@ function Cards() {
   });
 
   return (
-    <Slider {...bind()}>
-      {data.map((data) => (
-        <animated.div
-          id={data.id}
-          key={data.id}
-          className="slider-item"
-          style={{
-            transform: x.to(
-              (value, scale) =>
-                `translate3d(${value}px, 0px, 0px) scale(${scale})`
-            ),
-          }}
-        >
-          <Card data={data} key={data.id} id={data.id} />
-        </animated.div>
-      ))}
-    </Slider>
+    <>
+      <Slider {...bind()}>
+        {data.map((data) => (
+          <animated.div
+            id={data.id}
+            key={data.id}
+            className="slider-item"
+            style={{
+              transform: x.to(
+                (value, scale) =>
+                  `translate3d(${value}px, 0px, 0px) scale(${scale})`
+              ),
+            }}
+          >
+            <Card data={data} key={data.id} id={data.id} />
+          </animated.div>
+        ))}
+      </Slider>
+      <NumbersContainer total={data.length}>
+        <Numbers total={data.length} active={activeItem} />
+      </NumbersContainer>
+    </>
   );
 }
 
