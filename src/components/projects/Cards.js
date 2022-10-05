@@ -6,9 +6,12 @@ import Card from "./Card.js";
 import data from "../../data/data.json";
 import "./cardStyles.css";
 
-const THRESHOLD = 600;
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+let THRESHOLD = 600;
+
+isMobile ? (THRESHOLD = 250) : (THRESHOLD = 600);
+
 let cardWidth = 700;
-//let cardMargin = -20;
 
 function Cards() {
   const [animating, setAnimating] = useState(false);
@@ -24,12 +27,6 @@ function Cards() {
     setTimeout(() => {
       setAnimating(false);
     }, 600);
-    /*
-    const note = document.getElementsByClassName(
-      `slider-item ${activeItem + 1}`
-    );
-    note[0].style.scale = 1;
-    */
   };
 
   const bind = useDrag(({ movement: [mx] }) => {
@@ -43,7 +40,6 @@ function Cards() {
 
     cardWidth = document.getElementById("1");
 
-    //  cardMargin = cardMargin * (activeItem + 1);
     console.log(moveX);
 
     if (moveX < -THRESHOLD) {
@@ -57,8 +53,6 @@ function Cards() {
     }
 
     moveX = moveX - cardWidth.offsetWidth * 1 * activeItem;
-    //rotate = rotate + 45 * activeItem;
-    //scale = scale + 1 * activeItem;
 
     set({ x: [moveX, scale] });
   });

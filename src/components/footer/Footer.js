@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterContainer, LogosContainer, TxtFooter } from "./Footer.styles.js";
+import { FooterContainer, LogosContainer } from "./Footer.styles.js";
 
 import linkedin from "../../static/img/linkedin.svg";
 import github from "../../static/img/github.svg";

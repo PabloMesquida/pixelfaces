@@ -1,14 +1,14 @@
 import React from "react";
 import Cards from "./Cards.js";
-import { ProjectsContainer } from "./Projects.styles.js";
+import { ProjectsContainer, CardsContainer } from "./Projects.styles.js";
 
 const Projects = () => {
   return (
     <ProjectsContainer>
       <h2>Projects.</h2>
-      <article>
+      <CardsContainer>
         <Cards />
-      </article>
+      </CardsContainer>
     </ProjectsContainer>
   );
 };

@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "The Adventures of The Black Hawk",
-    "description": "A graphic adventure of the 90s, thirty years later. Full of humor, irony, calamities and a lot, a lot of intrigue.",
+    "description": "A graphic adventure of the 90s, thirty years later. Full of humor, irony, calamities and a lot of intrigue.",
     "img": "halcon.jpg",
     "role": "Character Design",
     "tags": ["Pixel Art"],
@@ -19,20 +19,11 @@
   },
   {
     "id": 3,
-    "name": "Beatpoints",
-    "description": "Spotify API where a group of points react to the beat of the songs in a 3d environment.",
-    "img": "beatpoints.png",
-    "role": "Design & development",
-    "tags": ["React.js", "Three.js"],
-    "link": "https://beatpoints.herokuapp.com/"
-  },
-  {
-    "id": 4,
-    "name": "The Adventures of The Black Hawk",
-    "description": "A graphic adventure of the 90s, thirty years later. Full of humor, irony, calamities and a lot, a lot of intrigue.",
-    "img": "halcon.jpg",
+    "name": "Argentina 8-bit",
+    "description": "Argentine culture app with retro aesthetics that uses the latest interactive technologies: AR, VR, and virtual chat with voice use.",
+    "img": "argentina8b.jpg",
     "role": "Character Design",
     "tags": ["Pixel Art"],
-    "link": "https://www.elhalconnegro.com/engindex.html/"
+    "link": "https://argentina8bit.com/"
   }
 ]

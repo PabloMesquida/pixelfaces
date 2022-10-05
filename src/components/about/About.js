@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  AboutContainer,
-  ImgAbout,
-  TxtAbout,
-  LogosContainer,
-} from "./About.styles.js";
+import { AboutContainer, ImgAbout, TxtAbout } from "./About.styles.js";
 import pabloImgMobile from "../../static/img/pabloAlpha.png";
 import pabloImg from "../../static/img/pabloAlpha_small.png";
 
