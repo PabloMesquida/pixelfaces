@@ -8,11 +8,12 @@ import data from "../../data/data.json";
 import "./cardStyles.css";
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const cardMargin = 20;
+
 let THRESHOLD = 600;
+let cardWidth;
 
 isMobile ? (THRESHOLD = 250) : (THRESHOLD = 600);
-
-let cardWidth;
 
 function Cards() {
   const [animating, setAnimating] = useState(false);
@@ -40,28 +41,29 @@ function Cards() {
     if (moveX < 0 && activeItem === data.length - 1) return;
 
     cardWidth = document.getElementById("1");
+    let cardWidthPx = cardWidth.offsetWidth + cardMargin;
 
     if (moveX < -THRESHOLD) {
-      moveX = -cardWidth.offsetWidth * 1;
+      moveX = -cardWidthPx * 1;
       scale = 1;
       animateNextSlide("left");
     } else if (moveX > THRESHOLD) {
-      moveX = cardWidth.offsetWidth * 1;
+      moveX = cardWidthPx * 1;
       scale = 1;
       animateNextSlide("right");
     }
 
-    moveX = moveX - cardWidth.offsetWidth * 1 * activeItem;
+    moveX = moveX - cardWidthPx * activeItem;
 
     set({ x: [moveX, scale] });
   });
 
   const callback = (activeBtn) => {
     let i = activeBtn - 1;
-    cardWidth = document.getElementById("1");
-    set({ x: [-cardWidth.offsetWidth * i, 1] });
+    let cardWidth = document.getElementById("1");
+    let cardWidthPx = cardWidth.offsetWidth + cardMargin;
+    set({ x: [-cardWidthPx * i, 1] });
     setActiveItem(i);
-    console.log(-cardWidth.offsetWidth);
   };
 
   return (
