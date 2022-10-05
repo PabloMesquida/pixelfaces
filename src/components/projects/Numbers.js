@@ -1,17 +1,23 @@
 import React from "react";
 import { Number } from "./Numbers.styles.js";
 
-const Numbers = ({ total, active }) => {
+const Numbers = (props) => {
   let content = [];
 
-  for (let i = 0; i < total; i++) {
+  const selectActive = (i) => {
+    props.onClick(i);
+  };
+
+  for (let i = 0; i < props.total; i++) {
     content.push(
-      active === i ? (
+      props.active === i ? (
         <Number key={i} className="active">
           {i + 1}
         </Number>
       ) : (
-        <Number key={i}>{i + 1}</Number>
+        <Number key={i} onClick={() => selectActive(i + 1)}>
+          {i + 1}
+        </Number>
       )
     );
   }

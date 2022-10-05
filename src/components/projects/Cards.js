@@ -12,7 +12,7 @@ let THRESHOLD = 600;
 
 isMobile ? (THRESHOLD = 250) : (THRESHOLD = 600);
 
-let cardWidth = 700;
+let cardWidth;
 
 function Cards() {
   const [animating, setAnimating] = useState(false);
@@ -56,6 +56,14 @@ function Cards() {
     set({ x: [moveX, scale] });
   });
 
+  const callback = (activeBtn) => {
+    let i = activeBtn - 1;
+    cardWidth = document.getElementById("1");
+    set({ x: [-cardWidth.offsetWidth * i, 1] });
+    setActiveItem(i);
+    console.log(-cardWidth.offsetWidth);
+  };
+
   return (
     <>
       <Slider {...bind()}>
@@ -76,7 +84,7 @@ function Cards() {
         ))}
       </Slider>
       <NumbersContainer total={data.length}>
-        <Numbers total={data.length} active={activeItem} />
+        <Numbers total={data.length} active={activeItem} onClick={callback} />
       </NumbersContainer>
     </>
   );

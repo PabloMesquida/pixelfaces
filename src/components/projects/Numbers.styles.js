@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Number = styled.span`
+export const Number = styled.button`
   padding: 0.2rem 0.4rem;
   margin: 0.2rem;
   color: ${({ theme }) => theme.txtSecondaryColor};
