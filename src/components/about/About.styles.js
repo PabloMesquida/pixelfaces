@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutContainer = styled.section`
-  border-top: thin solid ${({ theme }) => theme.primaryColor};
+  border-top: thin solid ${({ theme }) => theme.secondaryColorLighter};
 `;
 
 export const ImgAbout = styled.img`

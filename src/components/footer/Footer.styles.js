@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   display: flex;
+  flex-direction: column;
   width: 96vw;
   max-width: 880px;
   min-width: 280px;
-  height: 100px;
+  height: 120px;
   align-content: flex-start;
   justify-content: center;
   align-items: center;
@@ -18,4 +19,8 @@ export const LogosContainer = styled.div`
   max-width: 400px;
   display: flex;
   justify-content: space-between;
+`;
+
+export const TxtFooter = styled.p`
+  color: ${({ theme }) => theme.txtSecondaryColor};
 `;

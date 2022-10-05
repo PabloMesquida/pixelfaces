@@ -33,7 +33,7 @@ body {
 h1{
   font-family: 'Press Start 2P', sans-serif;
   font-size: 3rem;
-  color: ${({ theme }) => theme.primaryColor};  
+  color: ${({ theme }) => theme.primaryColor};
 }
 
 h2{
@@ -42,13 +42,15 @@ h2{
   padding:0.5rem;
   padding-left: 6%;
   margin-bottom: 0;
-  color: ${({ theme }) => theme.secondaryColor};
-  background-color:  ${({ theme }) => theme.primaryColor};
-  text-shadow: 0px 0px 4px ${({ theme }) => theme.secondaryShadowColor};
+  color: ${({ theme }) => theme.primaryColor};
+ 
+  background-color:  ${({ theme }) => theme.secondaryColorLighter};
+  text-shadow: 0px 0px 5px rgba(255, 162, 0, 0.6);
+  border-bottom: medium solid #00000080;
 
   &::after {
     content: "█";
-    text-shadow: 0px 0px 6px ${({ theme }) => theme.secondaryShadowColor};
+  text-shadow: 0px 0px 5px rgba(255, 162, 0, 0.6);
     animation: blink-animation 1s steps(5, start) infinite;
     -webkit-animation: blink-animation 1s steps(5, start) infinite;
   }
@@ -95,6 +97,7 @@ article{
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.secondaryColor};
+   
 }
 
 section{

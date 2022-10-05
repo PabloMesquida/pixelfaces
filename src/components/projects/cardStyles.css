@@ -1,0 +1,11 @@
+.slider-item {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
+  touch-action: pan-y;
+  margin-right: 0px;
+  @media (min-width: 640px) {
+    height: 250px;
+  }
+}

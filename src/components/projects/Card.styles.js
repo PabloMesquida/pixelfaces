@@ -7,7 +7,7 @@ export const CardContainer = styled.div`
   /* border: thin solid ${({ theme }) => theme.primaryColor};*/
   background-color: ${({ theme }) => theme.secondaryColorLighter};
   box-shadow: 0 4px 0px -1px #00000060;
-
+  cursor: move;
   @media (min-width: 640px) {
     flex-direction: row;
     height: 250px;
@@ -25,6 +25,7 @@ export const CardInfo = styled.div`
   width: 100%;
   padding: 1rem;
   padding-left: 1.3rem;
+  user-select: none;
   @media (max-width: 640px) {
     height: 270px;
   }
@@ -51,6 +52,7 @@ export const CardImage = styled.div`
 `;
 
 export const CardDescription = styled.p`
+  font-size: 0.8rem;
   color: ${({ theme }) => theme.txtSecondaryColor};
 `;
 
