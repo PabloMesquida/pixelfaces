@@ -21,7 +21,7 @@ const About = () => {
           <p>
             <b>Get in touch:</b>
             <br />
-            pablo@thepixfaces.com
+            pablo@thepixelfaces.com
           </p>
         </TxtAbout>
       </article>
