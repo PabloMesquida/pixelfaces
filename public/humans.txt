@@ -1,0 +1,9 @@
+/* Pixel Faces - https://pixelfaces.vercel.app */
+
+
+
+/* TEAM */
+Design & Develop: Pablo Mesquida
+Contact: pablo [at] thepixelfaces.com
+Twitter: @pixel_faces
+Location: Madrid, España
