@@ -52,7 +52,7 @@ export const CardImage = styled.div`
 
 export const CardDescription = styled.p`
   font-size: 0.8rem;
-  color: ${({ theme }) => theme.txtSecondaryColor};
+  color: ${({ theme }) => theme.txtColor};
 `;
 
 export const CardTags = styled.div``;

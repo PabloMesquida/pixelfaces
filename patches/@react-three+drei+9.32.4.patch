@@ -15,7 +15,7 @@ index e6b1682..8631666 100644
            opacity = 1.0 / (1.0 + exp(16.0 * (d - 0.25)));
          }
 -        gl_FragColor = vec4(vColor, opacity);
-+       gl_FragColor = vec4(0.35, 0, 0, 0.5); 
++       gl_FragColor = vec4(0.35, 0, 0, 0.7); 
  
          #include <tonemapping_fragment>
  	      #include <encodings_fragment>
