@@ -10,10 +10,10 @@ import "./cardStyles.css";
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 const cardMargin = 20;
 
-let THRESHOLD = 600;
+let threshold = 600;
 let cardWidth;
 
-isMobile ? (THRESHOLD = 250) : (THRESHOLD = 600);
+isMobile ? (threshold = 250) : (threshold = 600);
 
 function Cards() {
   const [animating, setAnimating] = useState(false);
@@ -43,11 +43,11 @@ function Cards() {
     cardWidth = document.getElementById("1");
     let cardWidthPx = cardWidth.offsetWidth + cardMargin;
 
-    if (moveX < -THRESHOLD) {
+    if (moveX < -threshold) {
       moveX = -cardWidthPx * 1;
       scale = 1;
       animateNextSlide("left");
-    } else if (moveX > THRESHOLD) {
+    } else if (moveX > threshold) {
       moveX = cardWidthPx * 1;
       scale = 1;
       animateNextSlide("right");
