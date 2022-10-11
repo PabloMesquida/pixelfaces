@@ -13,7 +13,7 @@ import Loader from "../Loader.js";
 import { MainAnimation, MainConteiner, H1, AH1, Txt } from "./Main.styles.js";
 
 const Main = () => {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const IS_MOBILE = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const arrayEmojis = [
     "🙂",
@@ -44,8 +44,8 @@ const Main = () => {
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      const temp = array[i];
+      let j = Math.floor(Math.random() * (i + 1));
+      let temp = array[i];
       array[i] = array[j];
       array[j] = temp;
     }
@@ -55,7 +55,7 @@ const Main = () => {
   return (
     <MainAnimation>
       <Suspense fallback={<Loader />}>
-        {isMobile && (
+        {IS_MOBILE && (
           <Canvas
             style={{ position: "absolute", zIndex: 0 }}
             className="webgl"
@@ -82,7 +82,7 @@ const Main = () => {
           camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
         >
           <Lights />
-          <EarthSistem isMobile={isMobile} />
+          <EarthSistem isMobile={IS_MOBILE} />
           <EffectComposer>
             <Pixelation granularity={8} />
             <Vignette darkness={0.8} />

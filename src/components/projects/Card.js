@@ -14,7 +14,7 @@ import {
 } from "./Card.styles.js";
 
 const Card = ({ data }) => {
-  const imgURL = `assets/img/${data.img}`;
+  let imgURL = `assets/img/${data.img}`;
 
   let tags = [];
 

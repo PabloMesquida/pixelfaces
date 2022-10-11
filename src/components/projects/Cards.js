@@ -7,13 +7,13 @@ import Numbers from "./Numbers.js";
 import data from "../../data/data.json";
 import "./cardStyles.css";
 
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const cardMargin = 20;
+const IS_MOBILE = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const CARDMARGIN = 20;
 
-let threshold = 600;
+let threshold;
 let cardWidth;
 
-isMobile ? (threshold = 250) : (threshold = 600);
+IS_MOBILE ? (threshold = 250) : (threshold = 600);
 
 function Cards() {
   const [animating, setAnimating] = useState(false);
@@ -41,7 +41,7 @@ function Cards() {
     if (moveX < 0 && activeItem === data.length - 1) return;
 
     cardWidth = document.getElementById("1");
-    let cardWidthPx = cardWidth.offsetWidth + cardMargin;
+    let cardWidthPx = cardWidth.offsetWidth + CARDMARGIN;
 
     if (moveX < -threshold) {
       moveX = -cardWidthPx * 1;
@@ -61,7 +61,7 @@ function Cards() {
   const callback = (activeBtn) => {
     let i = activeBtn - 1;
     let cardWidth = document.getElementById("1");
-    let cardWidthPx = cardWidth.offsetWidth + cardMargin;
+    let cardWidthPx = cardWidth.offsetWidth + CARDMARGIN;
     set({ x: [-cardWidthPx * i, 1] });
     setActiveItem(i);
   };
