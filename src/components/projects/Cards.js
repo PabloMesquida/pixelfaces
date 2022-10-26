@@ -87,9 +87,11 @@ function Cards({ data }) {
           </animated.div>
         ))}
       </Slider>
-      <NumbersContainer total={data.length}>
-        <Numbers total={data.length} active={activeItem} onClick={callback} />
-      </NumbersContainer>
+      {data.length > 1 && (
+        <NumbersContainer total={data.length}>
+          <Numbers total={data.length} active={activeItem} onClick={callback} />
+        </NumbersContainer>
+      )}
     </>
   );
 }
