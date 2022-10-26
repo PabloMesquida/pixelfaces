@@ -25,7 +25,7 @@ body {
   font-size: 0.8rem;
   color: ${({ theme }) => theme.txtColor};
   scroll-behavior: smooth;
-    @media (min-width: 640px) {
+  @media (min-width: 640px) {
      font-size: 0.9rem;
   }
 }

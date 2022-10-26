@@ -6,7 +6,8 @@
     "img": "beatpoints.png",
     "role": "Design & development",
     "tags": ["React.js", "Three.js"],
-    "link": "https://beatpoints.herokuapp.com/"
+    "link": "https://beatpoints.herokuapp.com/",
+    "category": 1
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "img": "halcon.jpg",
     "role": "Character Design",
     "tags": ["Pixel Art"],
-    "link": "https://www.elhalconnegro.com/engindex.html"
+    "link": "https://www.elhalconnegro.com/engindex.html",
+    "category": 2
   },
   {
     "id": 3,
@@ -24,6 +26,17 @@
     "img": "argentina8b.jpg",
     "role": "Character Design",
     "tags": ["Pixel Art"],
-    "link": "https://argentina8bit.com/"
+    "link": "https://argentina8bit.com/",
+    "category": 2
+  },
+  {
+    "id": 4,
+    "name": "Alex Zambrano Puente",
+    "description": "Single Page Aplication",
+    "img": "alex.jpg",
+    "role": "Design & development",
+    "tags": ["React.js"],
+    "link": "http://thepixelfaces.com/alexzambrano",
+    "category": 3
   }
 ]

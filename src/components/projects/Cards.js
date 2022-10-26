@@ -15,12 +15,14 @@ let cardWidth;
 
 IS_MOBILE ? (threshold = 250) : (threshold = 600);
 
-function Cards() {
+function Cards({ data }) {
   const [animating, setAnimating] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
   const [{ x }, set] = useSpring(() => ({
     x: [0, 1],
   }));
+
+  //data = data.filter((data) => data.category === cat);
 
   const animateNextSlide = (direction) => {
     setAnimating(true);
