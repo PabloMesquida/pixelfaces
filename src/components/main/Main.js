@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { DeviceOrientationControls, Stars } from "@react-three/drei";
 import {
@@ -9,7 +9,6 @@ import {
 import EarthSistem from "./EarthSistem.js";
 import Lights from "./Lights.js";
 import RandomEmoji from "./RandomEmoji.js";
-import Loader from "../Loader.js";
 import { MainAnimation, MainConteiner, H1, AH1, Txt } from "./Main.styles.js";
 
 const Main = () => {
@@ -54,50 +53,42 @@ const Main = () => {
 
   return (
     <MainAnimation>
-      <Suspense fallback={<Loader />}>
-        {IS_MOBILE && (
-          <Canvas
-            style={{ position: "absolute", zIndex: 0 }}
-            className="webgl"
-            dpr={[1, 2]}
-            camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
-          >
-            <DeviceOrientationControls />
-            <Stars
-              speed={0}
-              depth={0}
-              count={1000}
-              saturation={50}
-              factor={7}
-            />
-            <EffectComposer>
-              <Vignette darkness={0.8} />
-            </EffectComposer>
-          </Canvas>
-        )}
+      {IS_MOBILE && (
         <Canvas
-          style={{ position: "relative", zIndex: 1 }}
+          style={{ position: "absolute", zIndex: 0 }}
           className="webgl"
           dpr={[1, 2]}
           camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
         >
-          <Lights />
-          <EarthSistem isMobile={IS_MOBILE} />
+          <DeviceOrientationControls />
+          <Stars speed={0} depth={0} count={1000} saturation={50} factor={7} />
           <EffectComposer>
-            <Pixelation granularity={8} />
             <Vignette darkness={0.8} />
           </EffectComposer>
         </Canvas>
-        <MainConteiner>
-          <H1>
-            <AH1 href="#About">Pixel Faces</AH1>
-          </H1>
-          <Txt>
-            <b>Hi, Welcome!</b>
-          </Txt>
-          <RandomEmoji arrayE={shuffleArray(arrayEmojis)} />
-        </MainConteiner>
-      </Suspense>
+      )}
+      <Canvas
+        style={{ position: "relative", zIndex: 1 }}
+        className="webgl"
+        dpr={[1, 2]}
+        camera={{ fov: 50, position: [0, 0, 10], near: 0.01, far: 1000 }}
+      >
+        <Lights />
+        <EarthSistem isMobile={IS_MOBILE} />
+        <EffectComposer>
+          <Pixelation granularity={8} />
+          <Vignette darkness={0.8} />
+        </EffectComposer>
+      </Canvas>
+      <MainConteiner>
+        <H1>
+          <AH1 href="#About">Pixel Faces</AH1>
+        </H1>
+        <Txt>
+          <b>Hi, Welcome!</b>
+        </Txt>
+        <RandomEmoji arrayE={shuffleArray(arrayEmojis)} />
+      </MainConteiner>
     </MainAnimation>
   );
 };
