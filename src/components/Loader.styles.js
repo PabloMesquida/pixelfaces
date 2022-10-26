@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+let vh = window.innerHeight;
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  height: ${vh}px;
+`;
+
 export const LoaderTxt = styled.span`
   text-align: center;
   font-family: "Roboto Mono", monospace;

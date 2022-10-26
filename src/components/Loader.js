@@ -1,5 +1,5 @@
 import React from "react";
-import { LoaderTxt } from "./Loader.styles.js";
+import { LoaderTxt, LoaderContainer } from "./Loader.styles.js";
 
 const Loader = () => {
   return (
