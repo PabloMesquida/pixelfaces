@@ -1,4 +1,5 @@
 const botonAceptarCookies = document.getElementById("btn-aceptar");
+const botonCancelarCookies = document.getElementById("btn-cancelar");
 const avisoCookies = document.getElementById("aviso");
 const fondoAvisoCookies = document.getElementById("fondo-aviso");
 
@@ -14,4 +15,9 @@ botonAceptarCookies.addEventListener("click", () => {
   fondoAvisoCookies.classList.remove("activo");
   localStorage.setItem("cookies-aceptadas", true);
   window.dataLayer.push({ event: "cookies-aceptadas" });
+});
+
+botonCancelarCookies.addEventListener("click", () => {
+  avisoCookies.classList.remove("activo");
+  fondoAvisoCookies.classList.remove("activo");
 });
