@@ -4,7 +4,6 @@ import { useDrag } from "@use-gesture/react";
 import { Slider, NumbersContainer } from "./Cards.styles.js";
 import Card from "./Card.js";
 import Numbers from "./Numbers.js";
-import data from "../../data/data.json";
 import "./cardStyles.css";
 
 const IS_MOBILE = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -21,8 +20,6 @@ function Cards({ data }) {
   const [{ x }, set] = useSpring(() => ({
     x: [0, 1],
   }));
-
-  //data = data.filter((data) => data.category === cat);
 
   const animateNextSlide = (direction) => {
     setAnimating(true);
